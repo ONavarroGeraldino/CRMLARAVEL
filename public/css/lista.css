@@ -1,0 +1,156 @@
+/* estilos.css */
+
+/* Estilos generales del main */
+.content {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilo de títulos */
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor de usuarios */
+.usuarios-container {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow-x: auto; /* permite scroll horizontal en pantallas pequeñas */
+}
+
+/* Tabla */
+.usuarios-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.usuarios-container th,
+.usuarios-container td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.usuarios-container th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.usuarios-container tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Botones */
+button, .usuarios-container a {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+button:hover, .usuarios-container a:hover {
+    background-color: #357ab7;
+}
+
+/* Inputs estilo main-template */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+/* ============================ */
+/* RESPONSIVE */
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .usuarios-container th,
+    .usuarios-container td {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    button, .usuarios-container a {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.6rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .content {
+        padding: 1.5rem;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .usuarios-container th,
+    .usuarios-container td {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.75rem;
+    }
+
+    button, .usuarios-container a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        font-size: 0.95rem;
+        padding: 0.45rem 0.7rem;
+    }
+}

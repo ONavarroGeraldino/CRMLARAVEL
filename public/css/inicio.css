@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y tipografía */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #87CEFA, #00BFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* para que no se pegue en pantallas pequeñas */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 360px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Título */
+.container h2 {
+    margin-bottom: 25px;
+    color: #0077b6;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Formulario */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs y labels */
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #023e8a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #90e0ef;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 8px #00b4d8;
+}
+
+/* Botón */
+button {
+    padding: 12px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #0077b6;
+}
+
+/* Mensajes de error */
+.errors {
+    background-color: #ffdddd;
+    color: #b00020;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Links */
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #0077b6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* ============================ */
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .errors {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 35px 30px;
+    }
+
+    .container h2 {
+        font-size: 26px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    button {
+        padding: 11px;
+        font-size: 15px;
+    }
+}

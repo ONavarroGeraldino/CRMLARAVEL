@@ -1,0 +1,106 @@
+/* public/css/reportes.css */
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Título del reporte */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tabla de usuarios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    overflow-x: auto; /* permite scroll horizontal en móviles */
+    display: block;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+table thead tr {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+/* Filas alternas para mayor legibilidad */
+table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Botón de descarga PDF */
+a.pdf-download {
+    display: inline-block;
+    background-color: #1D4ED8; /* azul */
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+a.pdf-download:hover {
+    background-color: #2563EB;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    a.pdf-download {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    table th, table td {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    a.pdf-download {
+        font-size: 13px;
+        padding: 9px 14px;
+    }
+}
